@@ -3,7 +3,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background: url('https://png.pngtree.com/background/20230527/original/pngtree-pink-and-white-shopping-bags-picture-image_2770421.jpg') no-repeat center center fixed;
+  background: url('core/static/images/bg.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #333;
   min-height: 100vh;
