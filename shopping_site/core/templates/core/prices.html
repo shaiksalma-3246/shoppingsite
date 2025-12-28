@@ -1,0 +1,48 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<div class="container py-10">
+  <h1 class="text-4xl font-bold text-center mb-8">Our Pricing Plans</h1>
+  <p class="text-center mb-12 text-lg text-gray-600">Choose a plan that works best for your shopping needs. No hidden charges.</p>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Basic Plan -->
+    <div class="border rounded-lg shadow-md p-6 text-center bg-white hover:shadow-xl transition">
+      <h2 class="text-2xl font-bold mb-4">Basic</h2>
+      <p class="text-3xl font-semibold text-green-600 mb-4">₹0</p>
+      <ul class="mb-6 text-gray-700 space-y-2">
+        <li>✔️ Browse all products</li>
+        <li>✔️ Add to Cart</li>
+        <li>❌ Order Tracking</li>
+        <li>❌ Premium Support</li>
+      </ul>
+      <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Get Started</button>
+    </div>
+
+    <!-- Standard Plan -->
+    <div class="border-2 border-green-600 rounded-lg shadow-md p-6 text-center bg-white hover:shadow-xl transition">
+      <h2 class="text-2xl font-bold mb-4">Standard</h2>
+      <p class="text-3xl font-semibold text-green-600 mb-4">₹299/month</p>
+      <ul class="mb-6 text-gray-700 space-y-2">
+        <li>✔️ Browse & Buy Products</li>
+        <li>✔️ Order Tracking</li>
+        <li>✔️ Email Support</li>
+        <li>❌ Priority Shipping</li>
+      </ul>
+      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Subscribe</button>
+    </div>
+
+    <!-- Premium Plan -->
+    <div class="border rounded-lg shadow-md p-6 text-center bg-white hover:shadow-xl transition">
+      <h2 class="text-2xl font-bold mb-4">Premium</h2>
+      <p class="text-3xl font-semibold text-green-600 mb-4">₹699/month</p>
+      <ul class="mb-6 text-gray-700 space-y-2">
+        <li>✔️ All Standard Features</li>
+        <li>✔️ Free Priority Shipping</li>
+        <li>✔️ 24/7 Live Support</li>
+        <li>✔️ Early Access to Sales</li>
+      </ul>
+      <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Join Premium</button>
+    </div>
+  </div>
+</div>
+{% endblock %}
