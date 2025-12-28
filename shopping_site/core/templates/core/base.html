@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shopping Site</title>
+  <link rel="stylesheet" href="{% static 'core/styles.css' %}" />
+</head>
+<body>
+  <nav class="navbar">
+    <a href="{% url 'index' %}" class="nav-logo">ShopSite</a>
+    <ul class="nav-links">
+      <li><a href="{% url 'index' %}">Home</a></li>
+      <li><a href="{% url 'features' %}">Features</a></li>
+      <li><a href="{% url 'prices' %}">Prices</a></li>
+      <li><a href="{% url 'about' %}">About</a></li>
+      <li><a href="{% url 'contact' %}">Contact</a></li>
+      <li><a href="{% url 'shop' %}">Shop</a></li>
+      {% if user.is_authenticated %}
+        <li><a href="{% url 'cart' %}">Cart</a></li>
+        
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+        <li><span>Hello, {{ user.username }}!</span></li>
+      {% else %}
+        <li><a href="{% url 'login' %}">Login</a></li>
+        <li><a href="{% url 'register' %}">Register</a></li>
+      {% endif %}
+    </ul>
+  </nav>
+
+  <div class="container">
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<div class="container py-5">
+  <h1 class="text-3xl font-bold mb-4">Contact Us</h1>
+  <p class="mb-6">Have any questions, feedback, or inquiries? We're here to help.</p>
+
+  <div class="mb-4">
+    <p><strong>Email:</strong> info@shoppingsite.com</p>
+    <p><strong>Phone:</strong> +91 98765 43210</p>
+    <p><strong>Address:</strong> 101 Shopping Plaza, City Center, India</p>
+  </div>
+
+  <h2 class="text-2xl font-semibold mb-3">Send a Message</h2>
+  <form method="post">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Your Name" class="block w-full p-2 mb-3 border rounded">
+    <input type="email" name="email" placeholder="Your Email" class="block w-full p-2 mb-3 border rounded">
+    <textarea name="message" placeholder="Your Message" class="block w-full p-2 mb-3 border rounded" rows="5"></textarea>
+    <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">Send Message</button>
+  </form>
+</div>
+{% endblock %}
