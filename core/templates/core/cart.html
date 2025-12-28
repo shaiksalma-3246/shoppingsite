@@ -1,0 +1,29 @@
+
+{% extends 'core/base.html' %}
+{% load mul %}
+{% block content %}
+  <h1>Your Cart</h1>
+  {% if cart_items %}
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>Product</th><th>Quantity</th><th>Price</th><th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for item in cart_items %}
+        <tr>
+          <td>{{ item.product.name }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>₹{{ item.product.price }}</td>
+          <td>₹{{ item.product.price|mul:item.quantity }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    <p class="total">Total: ₹{{ total }}</p>
+    <a class="btn" href="{% url 'place_order' %}">Place Order</a>
+  {% else %}
+    <p>Your cart is empty.</p>
+  {% endif %}
+{% endblock %}
